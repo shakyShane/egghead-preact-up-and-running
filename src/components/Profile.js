@@ -8,7 +8,9 @@ export class Profile extends Component {
     const username = this.props.match.params.user;
     this.props.fetchUser(username);
   }
-  render({loading, user}9>
+  render({loading, user}) {
+    return (
+        <div class="app">
           {loading
               ? <p>Fetching...</p>
               : <User image={user.avatar_url}
