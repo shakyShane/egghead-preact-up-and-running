@@ -1,18 +1,22 @@
 import { h } from 'preact';
-import { route } from 'preact-router';
+import { withRouter } from 'react-router-dom';
 
-function search(query) {
-  route(`/profile/${encodeURIComponent(query)}`);
+function search(router, query) {
+  if (query !== '') {
+    router.history.push(`/profile/${encodeURIComponent(query)}`);
+  }
 }
 
-export default function Home() {
+const Home = withRouter((router) => {
   return (
     <section>
       <p>Enter a Github Username</p>
       <input type="search"
              placeholder="eg: shakyshane"
-             onSearch={e => search(e.target.value)}
+             onSearch={e => search(router, e.target.value)}
              />
     </section>
   );
-}
+});
+
+export default Home;

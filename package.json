@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "preact": "^7.2.1",
-    "preact-router": "^2.4.1"
+    "preact-compat": "^3.14.3",
+    "preact-router": "^2.4.1",
+    "react-router-dom": "^4.0.0"
   }
 }
