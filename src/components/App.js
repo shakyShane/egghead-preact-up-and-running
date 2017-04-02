@@ -1,13 +1,20 @@
 import { h, Component } from 'preact';
+import { Router } from 'preact-router';
+import Home from './Home';
+import Profile from './Profile';
+import Error from './Error';
 
 export class App extends Component {
-  render(props, { text = '' }) {
+  render() {
     return (
-      <div>
-        <input type="text" value={text} onInput={this.linkState('text')}/>
-        <pre><code>{JSON.stringify(this.state, null, 2)}</code></pre>
+      <div class="app">
+        <Router>
+          <Home path="/" />
+          <Profile path="/profile/:user" />
+          <Error default />
+        </Router>
       </div>
-    )
+    );
   }
 }
 
