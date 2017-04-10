@@ -1725,6 +1725,10 @@ lcid@^1.0.0:
   dependencies:
     invert-kv "^1.0.0"
 
+linkstate@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/linkstate/-/linkstate-1.0.0.tgz#ea0e6920c54711f12a75c76d0e0a76a8cf3bf27c"
+
 load-json-file@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-1.1.0.tgz#956905708d58b4bab4c2261b04f59f31c99374c0"
