@@ -16,7 +16,7 @@ export function App() {
   return (
     <div class="app">
       {users.map(user =>
-          <User image={user.image} name={user.name} key={user.name}/>
+          <User {...user} key={user.name}/>
       )}
     </div>
   );
